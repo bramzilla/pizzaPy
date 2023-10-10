@@ -39,7 +39,27 @@ and sometimes you just need to create requirements.txt for a new project without
 
 [link to source](https://learnpython.com/blog/python-requirements-file/#:~:text=You%20can%20do%20it%20as,with%20pip%20list%20%2D%2Doutdated%20.&text=Step%202%3A%20Upgrade%20the%20required,with%20pip%20install%20%2DU%20PackageName%20.&text=It%20is%20also%20possible%20to,U%20%2Dr%20requirements.txt%20.)
 
+* Check unused, missing or transitive packages
 
+You can find obsolete dependencies by using deptry, 
+a command line utility that checks for various issues with a project's dependencies, 
+such as unused, missing or transitive dependencies.
+
+Add it to your project with:
+`pip install deptry`
+
+and then run
+`deptry .`
+
+Example output:
+Scanning 2 files...
+
+requirements.txt: DEP002 'pandas' defined as a dependency but not used in the codebase
+Found 1 dependency issue.
+
+Note that for the best results, you should be using a virtual environment for your project, see e.g. [here](https://stackoverflow.com/a/41799834/8037249).
+
+[link to source](https://stackoverflow.com/questions/25376213/delete-unused-packages-from-requirements-file)
 
 ## Contributing
 
