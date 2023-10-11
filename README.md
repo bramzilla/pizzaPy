@@ -57,9 +57,12 @@ Scanning 2 files...
 requirements.txt: DEP002 'pandas' defined as a dependency but not used in the codebase
 Found 1 dependency issue.
 
-Note that for the best results, you should be using a virtual environment for your project, see e.g. [here](https://stackoverflow.com/a/41799834/8037249).
+Note that for the best results, 
+you should be using a virtual environment for your project, see e.g. [here](https://stackoverflow.com/a/41799834/8037249).
 
 [link to source](https://stackoverflow.com/questions/25376213/delete-unused-packages-from-requirements-file)
+
+(Warning: When using pip to install deptry, make sure you install it within the virtual environment of your project. Installing deptry globally will not work, since it needs to have access to the metadata of the packages in the virtual environment.) [github source](https://github.com/fpgmaas/deptry)
 
 ## Contributing
 
