@@ -29,6 +29,53 @@ my_project/
 
 Instructions on how to install and set up the project.
 
+### setup virtual environment
+
+**Step 1: Open Your Terminal or Command Prompt:**
+Open your terminal or command prompt and navigate to your project's root directory. You can use the cd command to change directories.<br>
+`cd path\to\your\project`
+
+**Step 2: Check Python Version (Optional):**
+You can check the installed Python version by running:<br>
+`python --version`
+
+Ensure that you have the desired Python version installed. If not, you can install it from the Python website.
+
+**Step 3: Install virtualenv (if not already installed):**
+virtualenv is a Python package that allows you to create and manage virtual environments. If you don't have it installed, you can install it using pip:<br>
+`pip install virtualenv`
+
+**Step 4: Create a Virtual Environment:**
+In your project's directory, you can create a virtual environment using the following command. Replace venv with the name you want for your virtual environment:<br>
+`virtualenv venv`
+
+This command will create a directory named venv in your project directory, containing the isolated environment.
+
+**Step 5: Activate the Virtual Environment:**
+To activate the virtual environment, you'll need to run a command specific to your operating system.
+
+On Windows (PowerShell):<br>
+`.\venv\Scripts\Activate`
+
+On macOS and Linux (Bash):<br>
+`source venv/bin/activate`
+
+Once the virtual environment is activated, you'll notice that your command prompt or terminal prompt changes to show the name of the active environment (e.g., (venv)).
+
+**Step 6: Install Dependencies:**
+With the virtual environment active, you can now use pip to install the dependencies specific to your project without affecting the system-wide Python installation. For example, if you have a requirements.txt file listing your project's dependencies, you can install them with:<br>
+`pip install -r requirements.txt`
+
+**Step 7: Work in the Virtual Environment:**
+You can now work on your project within the virtual environment. Any Python scripts you run, or packages you install, will be isolated to this environment.
+
+**Step 8: Deactivate the Virtual Environment:**
+When you're done working in the virtual environment, you can deactivate it. This will return you to the system-wide Python environment.
+`deactivate`
+
+The virtual environment's name in your terminal prompt will disappear, indicating that you've returned to the system Python.
+
+
 ### setup new project
 
 ...Using VScode & Git
