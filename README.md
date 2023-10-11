@@ -3,6 +3,28 @@
 Just an experimentation to try and setup a python template project.
 First project file: gen_test01.py = test data generator.
 
+## Structure
+
+my_project/
+│
+├── README.md        # Documentation about your project
+├── .gitignore       # Specifies files/directories to be ignored by Git
+├── requirements.txt # List of project dependencies
+├── src/             # Source code directory
+│   ├── main.py      # Main Python script
+│   └── ...
+│
+├── tests/           # Unit tests directory (optional)
+│   ├── test_main.py # Unit tests for main.py (example)
+│   └── ...
+│
+├── data/            # Data files (if applicable)
+│   ├── input/
+│   ├── output/
+│   └── ...
+│
+└── venv/            # Virtual environment (if used)
+
 ## Installation
 
 Instructions on how to install and set up the project.
