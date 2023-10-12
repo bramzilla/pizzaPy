@@ -137,6 +137,17 @@ Visit your remote repository on the platform (e.g., GitHub) to ensure your code 
 
 That's it! You've now set up a project in VSCode, initialized a Git repository, and pushed your code to a remote repository. You can continue to develop your Python test data generator, make changes, commit them, and push updates to your Git repository as needed.
 
+**Creating new branch**
+`git checkout -b (new-branch-name)`
+
+**Go to other branch**
+`git checkout (branch-name)`
+
+Existing branch: 'working'
+
+**Check current branch**
+`git branch`
+
 
 
 ## Usage
