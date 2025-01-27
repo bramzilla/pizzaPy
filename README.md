@@ -1,4 +1,4 @@
-# FlyPy
+# PizzaPy
 
 Just an experimentation to try and setup a python template project.
 First project file: gen_test01.py = test data generator.
@@ -55,7 +55,7 @@ This command will create a directory named venv in your project directory, conta
 To activate the virtual environment, you'll need to run a command specific to your operating system.
 
 On Windows (PowerShell):<br>
-`.\venv\Scripts\Activate`
+`.\venv\Scripts\activate`
 
 On macOS and Linux (Bash):<br>
 `source venv/bin/activate`
@@ -101,7 +101,7 @@ b. Navigate to your project directory using the terminal. For example:
 cd path/to/your/project
 
 c. Run the following command to initialize a Git repository:
-git init
+`git init`
 
 **Step 6: Create a .gitignore File**
 Create a .gitignore file in your project directory to specify which files or directories Git should ignore. These are typically files that don't need to be tracked, such as temporary files, build artifacts, or sensitive information. You can create this file manually or use a template from https://www.gitignore.io/ based on your project's language and tools.
@@ -111,6 +111,7 @@ For example, to create a basic .gitignore file for Python projects, you can run:
 `echo ".DS_Store" >> .gitignore`
 
 **Step 7: Add and Commit Files**
+
 a. Create or copy your Python test data generator script into your project directory.
 
 b. Back in the integrated terminal, use the following Git commands to add and commit your files:<br>
@@ -138,9 +139,15 @@ Visit your remote repository on the platform (e.g., GitHub) to ensure your code 
 That's it! You've now set up a project in VSCode, initialized a Git repository, and pushed your code to a remote repository. You can continue to develop your Python test data generator, make changes, commit them, and push updates to your Git repository as needed.
 
 **Creating new branch**<br>
+`git branch (new-branch-name)`
+or:
+`git switch -c (branch-name)`
+or:
 `git checkout -b (new-branch-name)`
 
 **Go to other branch**<br>
+`git switch (branch-name)`
+or:
 `git checkout (branch-name)`
 
 Existing branch: 'working'
