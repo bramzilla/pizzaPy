@@ -230,7 +230,8 @@ Then build the Docker image with a custom name (my-image-name can be anything):<
 
 The . at the end means "current directory," which is required for Docker to find the Dockerfile.
 
-**Step 2: Run the Docker Container**
+**Step 2a: Run the Docker Container**
+(for visual output, check step 2b below.)<br>
 After building the image, you can create and run a container from it:<br>
 `docker run -d -p 8080:80 my-image-name`
 
@@ -240,6 +241,19 @@ Explanation:
 -p 8080:80: Map port 80 inside the container to port 8080 on your local machine.
 my-image-name: Name of the Docker image you built.
 You can access your application at http://localhost:8080, depending on your port configuration.
+
+**Step 2b: Run the Docker Container interactively**
+After building the image, you can create and run a container from it<br>
+If your app outputs logs or data, they will appear in the terminal after running the below command:<br>
+`docker run -it --rm -p 5000:5000 my-image-name`
+
+Explanation:
+
+-it: Interactive mode, useful for viewing logs and debug output.
+--rm: Automatically remove the container when it stops.
+-p 5000:5000: Maps port 5000 inside the container to port 5000 on your local machine (adjust for your app's port if different).
+my-image-name: The name of your image.
+
 
 **Step 3: Check Running Containers**
 To see active containers:<br>
