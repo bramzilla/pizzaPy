@@ -219,6 +219,50 @@ you should be using a virtual environment for your project, see e.g. [here](http
 
 (Warning: When using pip to install deptry, make sure you install it within the virtual environment of your project. Installing deptry globally will not work, since it needs to have access to the metadata of the packages in the virtual environment.) [github source](https://github.com/fpgmaas/deptry)
 
+## Docker 
+
+**Step 1: Build the Docker Image**
+First, navigate to the directory where your Dockerfile is located.<br>
+`cd /path/to/your/repo`
+
+Then build the Docker image with a custom name (my-image-name can be anything):<br>
+`docker build -t my-image-name .`
+
+The . at the end means "current directory," which is required for Docker to find the Dockerfile.
+
+**Step 2: Run the Docker Container**
+After building the image, you can create and run a container from it:<br>
+`docker run -d -p 8080:80 my-image-name`
+
+Explanation:
+
+-d: Run the container in detached mode (in the background).
+-p 8080:80: Map port 80 inside the container to port 8080 on your local machine.
+my-image-name: Name of the Docker image you built.
+You can access your application at http://localhost:8080, depending on your port configuration.
+
+**Step 3: Check Running Containers**
+To see active containers:<br>
+`docker ps`
+
+**Step 4: Stop and Remove Containers**
+To stop a running container:<br>
+`docker stop <container-id>`
+
+To remove a stopped container:<br>
+`docker rm <container-id>`
+
+**Step 5: Useful Commands**
+View Logs:<br>
+`docker logs <container-id>`
+
+Enter the Container Shell (for debugging):<br>
+`docker exec -it <container-id> sh`
+
+Clean Up Unused Images and Containers:<br>
+`docker system prune -a`
+
+
 ## Contributing
 
 Guidelines for contributing to the project.
